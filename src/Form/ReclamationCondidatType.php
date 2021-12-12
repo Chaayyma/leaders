@@ -17,10 +17,10 @@ class ReclamationCondidatType extends AbstractType
             ->add('password')
             ->add('lastname')
             ->add('firstname')
-            ->add('niveau_etude')
+
             ->add('experience')
             ->add('grade')
-            ->add('condidats')
+
             ->add('classes')
         ;
     }

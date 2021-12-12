@@ -146,5 +146,14 @@ class Condidat
     {
         $this->numt = $numt;
 
-        return $this;}}
+        return $this;}
+
+    public function addFormateur(Formateur $param)
+    {
+    }
+
+    public function removeFormateur(Formateur $param)
+    {
+    }
+}
 
