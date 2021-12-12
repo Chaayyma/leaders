@@ -1,0 +1,43 @@
+{% extends "admin/base.html.twig" %}
+{%  block title %} liste des utilisateurs {% endblock %}
+{% block body %}
+    <div style="width:50% ; margin-left: 30% ; margin-top: -40%">
+
+    <h1 style="margin-left: 20% ; color: rgba(1,54,130,0.75)"> liste des utilisateurs</h1>
+    <table class="table">
+        <thead>
+        <th>ID</th>
+        <th>Email</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>Roles</th>
+
+        </thead>
+        <tbody>
+        {# on boucle sur les utilisateurs #}
+        {% for use in user %}
+            <tr>
+                <td> {{ use.id }}</td>
+                <td> {{ use.email }}</td>
+                <td> {{ use.firstname }}</td>
+                <td> {{ use.lastname }}</td>
+                <td> {% for role in use.roles %}
+                        {% if role == "ROLE_USER" %}
+                            condidat
+                        {% elseif role == "ROLE_ADMIN" %}
+                            Administrateur
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td> <a href="{{ path('admin_modifier_utilisateur',{'id' : use.id})  }}" class="btn btn-warning"> Modifier </a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan= 5> il n'y a pas d'utilisateur inscrit </td>
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+    <div>
+{% endblock %}

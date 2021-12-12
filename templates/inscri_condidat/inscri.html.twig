@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter condidat {% endblock %}
+{% form_theme forminscription 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+    <div style="color: transparent">
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+
+    </div>
+    <div style="color: transparent">
+        <p style="color: transparent"> -------------------</p>
+        <p style="color: transparent"> -------------------</p>
+
+
+    </div>
+
+    <div class="example-wrapper container col-6">
+        {{ form_start((forminscription)) }}
+        {{ form_row((forminscription.login))}}
+        {{ form_row((forminscription.password))}}
+        {{ form_row((forminscription.nom))}}
+        {{ form_row((forminscription.prenom))}}
+        {{ form_row((forminscription.cin))}}
+        {{ form_row((forminscription.numt))}}
+
+        {{ form_end((forminscription)) }}
+        <button class="btn btn-info" type="submit">Enregistrer</button>
+    </div>
+{% endblock %}

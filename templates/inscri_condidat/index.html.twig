@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter condidat {% endblock %}
+{% form_theme forminscription 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+
+
+    <div class="example-wrapper container col-6">
+        {{ form_start((forminscription)) }}
+        {{ form_row((forminscription.login))}}
+        {{ form_row((forminscription.password))}}
+        {{ form_row((forminscription.nom))}}
+        {{ form_row((forminscription.prenom))}}
+        {{ form_row((forminscription.cin))}}
+        {{ form_row((forminscription.numt))}}
+        <button class="btn btn-info" type="submit">Enregistrer</button>
+        {{ form_end((forminscription)) }}
+    </div>
+{% endblock %}

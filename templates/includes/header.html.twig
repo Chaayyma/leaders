@@ -1,0 +1,39 @@
+<div class="navbar navbar-inverse navbar-fixed-top headroom" style="background:rgba(130,0,14,0.24)">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Button for smallest screens -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a class="navbar-brand" href="{{ path('index') }}"><img src="{{ asset('assets/images/logoleaders.png') }}" alt="Progressus HTML5 template" height="50px" ; width="150px" ></a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">formation <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../page/master-left.html.twig">Licences</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enseignants<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ asset('master-left.html.twig') }}">Gestion & Managment </a></li>
+                        <li class="active"><a href="sidebar-right.html">Informatique</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Activite <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sidebar-left.html.twig">Stage</a></li>
+                        <li class="active"><a href="sidebar-right.html">Les Certificats</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="btn" href="{{ path('app_register') }}"> SIGN UP</a></li>
+                <li><a class="btn" href="{{ path('app_login') }}"> SIGN IN</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
